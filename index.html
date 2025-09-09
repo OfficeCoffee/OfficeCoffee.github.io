@@ -1,0 +1,254 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+  <title>Team Page</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+
+  <style>
+    body {
+      margin: 0;
+      font-family: "Arial", sans-serif;
+      background: #A7C7E7;
+      color: #FFFFFF;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    /* Top Navigation */
+    #top-nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: transparent;
+      z-index: 1000;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      padding: 1rem 3rem;
+      box-sizing: border-box;
+    }
+    #top-nav ul {
+      display: flex;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      gap: 2.5rem;
+    }
+    #top-nav ul li {
+      position: relative;
+    }
+    #top-nav ul li a {
+      color: #FFFFFF;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.2rem;
+      transition: color 0.3s ease;
+      padding-bottom: 0.3rem;
+    }
+    #top-nav ul li a:hover {
+      color: #F5DEB3; /* Hover color */
+    }
+    #top-nav ul li a.active {
+      color: #F5DEB3; /* JS sets this dynamically */
+    }
+    #top-nav ul li a::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -4px;
+      width: 0%;
+      height: 2px;
+      background: #F5DEB3;
+      transition: width 0.3s ease;
+    }
+    #top-nav ul li a:hover::after,
+    #top-nav ul li a.active::after {
+      width: 100%;
+    }
+
+    #wrapper {
+      margin-top: 4rem;
+    }
+
+    .fullscreen-section {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 2rem;
+    }
+
+    /* Home Section */
+    #intro h1 {
+      font-size: 4rem;
+      margin-bottom: 1rem;
+      color: #FFFFFF;
+    }
+    #intro h1 .accent {
+      color: #F5DEB3;
+    }
+    #intro h2 {
+      font-size: 2rem;
+      font-weight: 400;
+      color: #FFFFFF;
+    }
+
+    /* Section Headers */
+    #two h2,
+    #reports h2 {
+      font-size: 2rem;
+      font-weight: 400;
+      margin-bottom: 2rem;
+      color: #FFFFFF;
+    }
+
+    /* Team Section */
+    .team-grid {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+    .team-member {
+      width: 320px;
+      height: 220px;
+      background: rgba(255, 255, 255, 0.2);
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(176,176,176,0.3);
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+    .team-member:hover {
+      transform: translateY(-6px);
+    }
+    .team-member img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 1rem;
+    }
+    .team-member h3 {
+      margin: 0.5rem 0;
+      font-weight: bold;
+      color: #FFFFFF;
+    }
+    .team-member p {
+      margin: 0.2rem 0;
+      font-size: 1rem;
+      color: #FFFFFF;
+    }
+    .team-member p .label {
+      color: #F5DEB3;
+      font-weight: bold;
+    }
+
+    /* Reports Section */
+    .overlay-box {
+      background: rgba(255, 255, 255, 0.2);
+      padding: 3rem 2rem;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(176,176,176,0.3);
+      width: 90%;
+      max-width: 800px;
+      min-height: 500px;
+      color: #FFFFFF;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+    }
+    #reports ul {
+      list-style-type: disc;
+      margin: 0 auto;
+      padding-left: 1.5rem;
+      text-align: left;
+      display: inline-block;
+    }
+    #reports ul li {
+      margin: 0.4rem 0;
+    }
+  </style>
+</head>
+<body>
+
+<nav id="top-nav">
+  <ul>
+    <li><a href="#intro">Home</a></li>
+    <li><a href="#two">Team</a></li>
+    <li><a href="#reports">Reports</a></li>
+  </ul>
+</nav>
+
+<div id="wrapper">
+  <section id="intro" class="fullscreen-section">
+    <h1>Team <span class="accent">RESC</span></h1>
+    <h2>Team for Intro to Software Engineering</h2>
+  </section>
+
+  <section id="two" class="fullscreen-section">
+    <h2>Team</h2>
+    <div class="team-grid">
+      <div class="team-member">
+        <img src="images/placeholder.png" alt="Profile 1">
+        <h3>Cedrick Charles</h3>
+        <p><span class="label">Role:</span> Backend Developer</p>
+        <p><span class="label">GitHub:</span> CedTheLearner</p>
+      </div>
+      <div class="team-member">
+        <img src="images/placeholder.png" alt="Profile 2">
+        <h3>Eli Zecchini</h3>
+        <p><span class="label">Role:</span> Backend Developer</p>
+        <p><span class="label">GitHub:</span> EliZecchini</p>
+      </div>
+      <div class="team-member">
+        <img src="images/placeholder.png" alt="Profile 3">
+        <h3>Shelby Stare</h3>
+        <p><span class="label">Role:</span> Frontend Developer</p>
+        <p><span class="label">GitHub:</span> Stare-ST</p>
+      </div>
+      <div class="team-member">
+        <img src="images/placeholder.png" alt="Profile 4">
+        <h3>Rose Taylor</h3>
+        <p><span class="label">Role:</span> Database Developer</p>
+        <p><span class="label">GitHub:</span> OfficeCoffee</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="reports" class="fullscreen-section">
+    <div class="overlay-box">
+      <h2>Reports</h2>
+      <ul>
+        <li>To be added</li>
+        <li>To be added</li>
+        <li>To be added</li>
+        <li>To be added</li>
+        <li>To be added</li>
+        <li>To be added</li>
+        <li>To be added</li>
+        <li>To be added</li>
+        <li>To be added</li>
+        <li>To be added</li>
+        <li>To be added</li>
+        <li>To be added</li>
+        <li>To be added</li>
+        <li>To be added</li>
+        <li>To be added</li>
+      </ul>
+    </div>
+  </section>
+</div>
+
+<script src="src/navHighlight.js" type="module"></script>
+
+</body>
+</html>

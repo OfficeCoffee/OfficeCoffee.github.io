@@ -4,14 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Team RESC - Student Schedule Project</title>
-    <!-- Load Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Configure Tailwind for Custom Colors and Basic Font Stack -->
     <style>
         body {
             font-family: Helvetica, Arial, sans-serif;
-            background-color: #0d1117; /* GitHub Dark Background */
-            color: #c9d1d9; /* GitHub Text Color */
+            background-color: #0d1117;
+            color: #c9d1d9;
             scroll-behavior: smooth;
         }
         .text-custom-purple { color: #4A2574; } 
@@ -26,11 +24,10 @@
             border-color: #4A2574;
         }
 
-        /* RESTORED: Active Navigation Style for highlighting current section */
         .active-nav {
-            border-bottom: 3px solid #4A2574; /* Purple underline */
+            border-bottom: 3px solid #4A2574;
             padding-bottom: 5px; 
-            color: #ffffff !important; /* Ensure active link text is white */
+            color: #ffffff !important;
         }
     </style>
 </head>
@@ -40,7 +37,6 @@
     <header class="sticky top-0 z-50 bg-[#161b22]/95 backdrop-blur-sm shadow-lg">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-16">
-                <!-- Logo/Project Name -->
                 <div class="flex items-center">
                     <span class="text-2xl font-bold text-custom-purple">Team RESC</span>
                 </div>
@@ -59,7 +55,6 @@
 
     <main class="py-12">
         
-        <!-- Hero Section (Now the primary content block) -->
         <section id="hero" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center py-32">
             <div class="max-w-4xl mx-auto">
                 <h1 class="text-5xl sm:text-6xl lg:text-7xl font-extrabold leading-tight tracking-tight mb-4 text-white">
@@ -268,11 +263,9 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            // RESTORED: Full IntersectionObserver script for dynamic navigation
             const navLinks = document.querySelectorAll('.nav-link');
             const sections = document.querySelectorAll('main section');
 
-            // Set the 'active' class on the target element
             function setActiveLink(id) {
                 navLinks.forEach(link => {
                     link.classList.remove('active-nav');
@@ -283,7 +276,6 @@
                 }
             }
 
-            // 1. Smooth Scrolling and Immediate Activation on Click
             navLinks.forEach(link => {
                 link.addEventListener('click', function (e) {
                     const href = this.getAttribute('href');
@@ -301,11 +293,9 @@
                 });
             });
 
-            // 2. Intersection Observer for Scroll Activation (more performant than scroll listener)
             const observerOptions = {
-                root: null, // viewport
+                root: null,
                 rootMargin: '0px',
-                // A section is considered active when 30% of it is visible
                 threshold: 0.3 
             };
 
@@ -318,12 +308,10 @@
                 });
             }, observerOptions);
 
-            // Observe all main sections
             sections.forEach(section => {
                 observer.observe(section);
             });
             
-            // Set initial active state to Home on load
             setActiveLink('hero');
         });
     </script>

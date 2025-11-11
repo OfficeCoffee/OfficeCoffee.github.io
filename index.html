@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team RESC - Student Schedule Project</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Configure Tailwind for Custom Colors and Basic Font Stack -->
+    <style>
+        body {
+            font-family: Helvetica, Arial, sans-serif;
+            background-color: #0d1117; /* GitHub Dark Background */
+            color: #c9d1d9; /* GitHub Text Color */
+            scroll-behavior: smooth;
+        }
+        .text-custom-purple { color: #4A2574; } 
+        .border-custom-purple { border-color: #4A2574; }
+        
+        .hover-glow {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .hover-glow:hover {
+            box-shadow: 0 4px 15px rgba(74, 37, 116, 0.7), 0 0 25px rgba(74, 37, 116, 0.4);
+            transform: translateY(-4px);
+            border-color: #4A2574;
+        }
+
+        /* RESTORED: Active Navigation Style for highlighting current section */
+        .active-nav {
+            border-bottom: 3px solid #4A2574; /* Purple underline */
+            padding-bottom: 5px; 
+            color: #ffffff !important; /* Ensure active link text is white */
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+
+    <!-- Header & Navigation -->
+    <header class="sticky top-0 z-50 bg-[#161b22]/95 backdrop-blur-sm shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <!-- Logo/Project Name -->
+                <div class="flex items-center">
+                    <span class="text-2xl font-bold text-custom-purple">Team RESC</span>
+                </div>
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        <!-- RESTORED: IDs and nav-link class for dynamic highlighting -->
+                        <a href="#hero" id="nav-hero" class="nav-link text-gray-300 hover:bg-[#30363d] hover:text-white px-3 py-2 rounded-md text-sm font-medium transition duration-150 active-nav">Home</a>
+                        <a href="#team" id="nav-team" class="nav-link text-gray-300 hover:bg-[#30363d] hover:text-white px-3 py-2 rounded-md text-sm font-medium transition duration-150">Team</a>
+                        <a href="#reports" id="nav-reports" class="nav-link text-gray-300 hover:bg-[#30363d] hover:text-white px-3 py-2 rounded-md text-sm font-medium transition duration-150">Reports</a>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="py-12">
+        
+        <!-- Hero Section (Now the primary content block) -->
+        <section id="hero" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center py-32">
+            <div class="max-w-4xl mx-auto">
+                <h1 class="text-5xl sm:text-6xl lg:text-7xl font-extrabold leading-tight tracking-tight mb-4 text-white">
+                    Student Schedule Project <span class="text-custom-purple"></span> 
+                </h1>
+                <p class="mt-6 text-xl text-gray-400 max-w-3xl mx-auto">
+                    Lorem ipsum
+                </p>
+            </div>
+        </section>
+
+        <!-- Team Section -->
+        <section id="team" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+            <h2 class="text-3xl font-extrabold text-white text-center sm:text-4xl mb-12">Meet Team <span class="text-custom-purple">RESC</span></h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                
+                <!-- Rose Taylor Card -->
+                <div class="text-center bg-[#161b22] p-6 rounded-xl border border-[#30363d] hover-glow">
+                    <img src="https://placehold.co/100x100/21262d/c9d1d9?text=M1" class="w-24 h-24 rounded-full mx-auto mb-4 border-2 border-custom-purple" onerror="this.src='https://placehold.co/100x100/21262d/c9d1d9?text=M1'" alt="Team Member 1">
+                    <h3 class="text-lg font-bold text-white">Rose Taylor</h3>
+                    <p class="text-custom-purple text-sm mb-2">Database / Middleware</p>
+                    <p class="text-gray-400 text-xs">Developed and created the database. Managed the connections between frontend and backend.</p>
+                </div>
+
+                <!-- Shelby Stare Card-->
+                <div class="text-center bg-[#161b22] p-6 rounded-xl border border-[#30363d] hover-glow">
+                    <img src="https://placehold.co/100x100/21262d/c9d1d9?text=M2" class="w-24 h-24 rounded-full mx-auto mb-4 border-2 border-custom-purple" onerror="this.src='https://placehold.co/100x100/21262d/c9d1d9?text=M2'" alt="Team Member 2">
+                    <h3 class="text-lg font-bold text-white">Shelby Stare</h3>
+                    <p class="text-custom-purple text-sm mb-2">Frontend Developer</p>
+                    <p class="text-gray-400 text-xs">Responsible for all user interfaces and frontend state management.</p>
+                </div>
+
+                <!-- Eli Zecchini Card -->
+                <div class="text-center bg-[#161b22] p-6 rounded-xl border border-[#30363d] hover-glow">
+                    <img src="https://placehold.co/100x100/21262d/c9d1d9?text=M3" class="w-24 h-24 rounded-full mx-auto mb-4 border-2 border-custom-purple" onerror="this.src='https://placehold.co/100x100/21262d/c9d1d9?text=M3'" alt="Team Member 3">
+                    <h3 class="text-lg font-bold text-white">Eli Zecchini</h3>
+                    <p class="text-custom-purple text-sm mb-2">Backend Developer</p>
+                    <p class="text-gray-400 text-xs">Built and maintained the server-side of the program</p>
+                </div>
+                
+                <!-- Cedrick Charles Card -->
+                <div class="text-center bg-[#161b22] p-6 rounded-xl border border-[#30363d] hover-glow">
+                    <img src="https://placehold.co/100x100/21262d/c9d1d9?text=M4" class="w-24 h-24 rounded-full mx-auto mb-4 border-2 border-custom-purple" onerror="this.src='https://placehold.co/100x100/21262d/c9d1d9?text=M4'" alt="Team Member 4">
+                    <h3 class="text-lg font-bold text-white">Cedrick Charles</h3>
+                    <p class="text-custom-purple text-sm mb-2">Backend Developer</p>
+                    <p class="text-gray-400 text-xs">Built and maintained the server-side of the program</p>
+                </div>
+
+            </div>
+        </section>
+        
+        <!-- Reports Section -->
+        <section id="reports" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+            <h2 class="text-3xl font-extrabold text-white text-center sm:text-4xl mb-12">Weekly Project Reports</h2>
+            <!-- FIXED: Changed from md:grid-cols-3 to md:grid-cols-2 to give reports more space -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+                <!-- Report 1: Week of Mon 8/25/2025 -->
+                <div class="bg-[#161b22] p-6 rounded-xl border border-[#30363d] hover-glow">
+                    <h3 class="text-xl font-bold text-white mb-2">Week of Monday 8/25/2025</h3>
+                    <p class="text-gray-400 text-sm space-y-2">
+                        <span class="block text-white font-medium">Completed:</span>
+                        <span class="block text-xs pl-2">During this week, we met and discussed our ideas for the project. During this time, we decided our roles for the project, Shelby: frontend, Rose: database, Cedrick and Eli: backend. We also looked over the requirements and came up with a few questions that we sent into the Slack channel. Rose also set up our GitHub repository and we were all added to it. </span>
+                        <span class="block text-white font-medium mt-2">Planned:</span>
+                        <span class="block text-xs pl-2">Familiarize ourselves with the different programming languages and tools we will be using throughout this project. Shelby will begin working with React and TypeScript and Cedrick and I will begin familiarizing ourselves with Python's various libraries and frameworks. Shelby will also send an email to CATs to receive the course data needed for our project. If we receive the data next week, Rose will begin building our database.</span>
+                        <span class="block text-white font-medium mt-2">Meetings:</span>
+                        <span class="block text-xs pl-2">1 team meeting (Total duration: 80 minutes).</span>
+                    </p>
+                </div>
+
+                <!-- Report 2: Week of Mon 9/1/2025 -->
+                <div class="bg-[#161b22] p-6 rounded-xl border border-[#30363d] hover-glow">
+                    <h3 class="text-xl font-bold text-white mb-2">Week of Monday 9/1/2025</h3>
+                    <p class="text-gray-400 text-sm space-y-2">
+                        <span class="block text-white font-medium">Completed:</span>
+                        <span class="block text-xs pl-2">This week, we crafted and sent our email to CATs to acquire the course information. We also further discussed the requirements for the project, especially regarding the frontend aspects like what we would need to display. We then outlined how we want our frontend to look.</span>
+                        <span class="block text-white font-medium mt-2">Planned:</span>
+                        <span class="block text-xs pl-2">Next week, we plan to hopefully acquire the course information and to start to build the database. We will also begin the development of the frontend, starting with the login page. During this time, we will also begin working on the backend and have the ability for the frontend to interact with the backend.</span>
+                        <span class="block text-white font-medium mt-2">Meetings:</span>
+                        <span class="block text-xs pl-2">1 team meetings (Total duration: 90 minutes).</span>
+                    </p>
+                </div>
+                
+                <!-- Report 3: Week of Mon 9/8/2025 -->
+                <div class="bg-[#161b22] p-6 rounded-xl border border-[#30363d] hover-glow">
+                    <h3 class="text-xl font-bold text-white mb-2">Week of Monday 9/8/2025</h3>
+                    <p class="text-gray-400 text-sm space-y-2">
+                        <span class="block text-white font-medium">Completed:</span>
+                        <span class="block text-xs pl-2">This week, since we had not heard back from CaTS, we went to the CaTS help desk to ask if we could potentially get a csv file with all the course information. They told us to email the registrar, so we did. We got a response during our meeting saying that they could not help and that we would need to find the course information ourselves. After this, we worked on our requirements Excel file. Shelby also made a frontend for our login page.</span>
+                        <span class="block text-white font-medium mt-2">Planned:</span>
+                        <span class="block text-xs pl-2">Next week, since we were unable to get the course information from CaTS or the registrar, we will find the course information ourselves and begin building the database. We will also review our requirements Excel file to ensure all requirements are included. We will then get the backend up and running to connect our login page to our main page and begin implementing the features of our main page.</span>
+                        <span class="block text-white font-medium mt-2">Meetings:</span>
+                        <span class="block text-xs pl-2">1 team meeting (Total duration: 120 minutes).</span>
+                    </p>
+                </div>
+                
+                <!-- Report 4: Week of Mon 9/15/2025 (NEW) -->
+                <div class="bg-[#161b22] p-6 rounded-xl border border-[#30363d] hover-glow">
+                    <h3 class="text-xl font-bold text-white mb-2">Week of Monday 9/15/2025</h3>
+                    <p class="text-gray-400 text-sm space-y-2">
+                        <span class="block text-white font-medium">Completed:</span>
+                        <span class="block text-xs pl-2">This week, we completed the requirements Excel file and the requirements presentation. We also continued to outline how we wanted our frontend to look, including the different subheadings so that the user can access the different features of the site.</span>
+                        <span class="block text-white font-medium mt-2">Planned:</span>
+                        <span class="block text-xs pl-2">Next week, we plan to begin the Software Requirements Specification document. We will also continue to implement the features of the main page to hopefully reach a fully functional frontend soon.</span>
+                        <span class="block text-white font-medium mt-2">Meetings:</span>
+                        <span class="block text-xs pl-2">2 team meetings (Total duration: 150 minutes).</span>
+                    </p>
+                </div>
+
+                <!-- Report 5: Week of Mon 9/22/2025 (NEW) -->
+                <div class="bg-[#161b22] p-6 rounded-xl border border-[#30363d] hover-glow">
+                    <h3 class="text-xl font-bold text-white mb-2">Week of Monday 9/22/2025</h3>
+                    <p class="text-gray-400 text-sm space-y-2">
+                        <span class="block text-white font-medium">Completed:</span>
+                        <span class="block text-xs pl-2">This week, we met and further discussed how we wanted our frontend UI to look. We also discussed our software design specification document and how we were going to go about completing it.</span>
+                        <span class="block text-white font-medium mt-2">Planned:</span>
+                        <span class="block text-xs pl-2">Next week, we are going to continue to work on implementing the frontend so that we can have it fully functional by the demo day. We will also continue to work on the software design specification document.</span>
+                        <span class="block text-white font-medium mt-2">Meetings:</span>
+                        <span class="block text-xs pl-2">1 team meeting (Total duration: 30 minutes).</span>
+                    </p>
+                </div>
+
+                <!-- Report 6: Week of Mon 9/29/2025 (NEW) -->
+                <div class="bg-[#161b22] p-6 rounded-xl border border-[#30363d] hover-glow">
+                    <h3 class="text-xl font-bold text-white mb-2">Week of Monday 9/29/2025</h3>
+                    <p class="text-gray-400 text-sm space-y-2">
+                        <span class="block text-white font-medium">Completed:</span>
+                        <span class="block text-xs pl-2">This week, we did not meet as we instead spent time studying for our midterms. Despite not meeting, we continued to work on the development of the frontend and our SRS document. We also worked on fixing our requirements document.</span>
+                        <span class="block text-white font-medium mt-2">Planned:</span>
+                        <span class="block text-xs pl-2">Next week, we are going to continue to work on implementing the frontend, incorporating the backend, and work on the software design specification document. We will also fully fix our requirements document.</span>
+                        <span class="block text-white font-medium mt-2">Meetings:</span>
+                        <span class="block text-xs pl-2">0 team meetings (Total duration: 0 minutes).</span>
+                        <span class="block text-xs pl-2">Note: This week was the first half of the two midterm weeks and the team decided to not hold a meeting. Instead, everyone sent individual updates</span>
+                    </p>
+                </div>
+
+                <!-- Report 7: Week of Monday 10/6/2025 -->
+                <div class="bg-[#161b22] p-6 rounded-xl border border-[#30363d] hover-glow">
+                    <h3 class="text-xl font-bold text-white mb-2">Week of Monday 10/6/2025</h3>
+                    <p class="text-gray-400 text-sm space-y-2">
+                        <span class="block text-white font-medium">Completed:</span>
+                        <span class="block text-xs pl-2">This week, we did not meet as we instead spent time studying for our midterms and we also had Fall Break. Despite not meeting, we continued to work on the development of the frontend and our SRS document. We also fully fixed our requirements document.</span>
+                        <span class="block text-white font-medium mt-2">Planned:</span>
+                        <span class="block text-xs pl-2">Next week, we are going to continue to gather all that we have completed for the midterm demo day. We will also continue to develop the backend and database to allow for the actual development of the algorithm to begin.</span>
+                        <span class="block text-white font-medium mt-2">Meetings:</span>
+                        <span class="block text-xs pl-2">1 team meeting (Total duration: 80 minutes).</span>
+                        <span class="block text-xs pl-2">Note: This week was the second half of the two midterm weeks and the team decided to not hold a meeting. Instead, everyone sent individual updates</span>
+                    </p>
+                </div>
+
+                <!-- Report 8: Week of Monday 10/13/2025 -->
+                <div class="bg-[#161b22] p-6 rounded-xl border border-[#30363d] hover-glow">
+                    <h3 class="text-xl font-bold text-white mb-2">Week of Monday 10/13/2025</h3>
+                    <p class="text-gray-400 text-sm space-y-2">
+                        <span class="block text-white font-medium">Completed:</span>
+                        <span class="block text-xs pl-2">This week, we met to finalize everything that we were going to be showing for the midterm demo day, connecting our backend to our frontend. We also began outlining our class scheduling algorithm.</span>
+                        <span class="block text-white font-medium mt-2">Planned:</span>
+                        <span class="block text-xs pl-2">Next week, we are going to begin implementing the class scheduling algorithm. We will also work to get our database connected to our backend. Once the database is connected to the backend, we can begin implementing the various features that require access to the database, like viewing course information.</span>
+                        <span class="block text-white font-medium mt-2">Meetings:</span>
+                        <span class="block text-xs pl-2">1 team meeting (Total duration: 90 minutes).</span>
+                    </p>
+                </div>
+
+                <!-- Report 9: Week of Monday 10/20/2025 -->
+                <div class="bg-[#161b22] p-6 rounded-xl border border-[#30363d] hover-glow">
+                    <h3 class="text-xl font-bold text-white mb-2">Week of Monday 10/20/2025</h3>
+                    <p class="text-gray-400 text-sm space-y-2">
+                        <span class="block text-white font-medium">Completed:</span>
+                        <span class="block text-xs pl-2">This week, we met to discuss the midterm demo day and what our focuses and priorities were going to be for the remainder of the project. We also continued to outline our course scheduling algorithm, and worked to get our backend connected to our database.</span>
+                        <span class="block text-white font-medium mt-2">Planned:</span>
+                        <span class="block text-xs pl-2">Next week, we will continue to develop the backend and get the backend and database fully connected to each other. We will also begin to develop our course scheduling algorithm once we can get our database and backend fully connected to each other. Connecting our database to our backend will also allow for queries to be completed on the database, which we can use to populate our frontend.</span>
+                        <span class="block text-white font-medium mt-2">Meetings:</span>
+                        <span class="block text-xs pl-2">1 team meeting (Total duration: 60 minutes).</span>
+                    </p>
+                </div>
+
+                <!-- Report 10: Week of Monday 10/27/2025 -->
+                <div class="bg-[#161b22] p-6 rounded-xl border border-[#30363d] hover-glow">
+                    <h3 class="text-xl font-bold text-white mb-2">Week of Monday 10/27/2025</h3>
+                    <p class="text-gray-400 text-sm space-y-2">
+                        <span class="block text-white font-medium">Completed:</span>
+                        <span class="block text-xs pl-2">This week, we met and ensured that the database was able to run correctly on everyone’s machines. Once we figured out how to get the database set up for everyone, we began creating the get and post requests that query the database. We also began implementing our scheduling algorithm.</span>
+                        <span class="block text-white font-medium mt-2">Planned:</span>
+                        <span class="block text-xs pl-2">Next week, we will continue to develop the backend and continue working on the course scheduling algorithm. Since we have some of the get and post requests already completed, we can also begin using those to populate our frontend.</span>
+                        <span class="block text-white font-medium mt-2">Meetings:</span>
+                        <span class="block text-xs pl-2">1 team meeting (Total duration: 60 minutes).</span>
+                    </p>
+                </div>
+
+                <!-- Report 11: Week of Monday 11/3/2025 -->
+                <div class="bg-[#161b22] p-6 rounded-xl border border-[#30363d] hover-glow">
+                    <h3 class="text-xl font-bold text-white mb-2">Week of Monday 11/3/2025</h3>
+                    <p class="text-gray-400 text-sm space-y-2">
+                        <span class="block text-white font-medium">Completed:</span>
+                        <span class="block text-xs pl-2">This week, we continued to work on our backend and scheduling algorithm and decided on and set our time for the final demo. We also reevaluated our requirements to see what we need to prioritize for the final demo day. We are prioritizing the student requirements and the scheduling algorithm first, and then will work on the faculty and admin requirements once we feel the student requirements are met.</span>
+                        <span class="block text-white font-medium mt-2">Planned:</span>
+                        <span class="block text-xs pl-2">Next week, we will continue to work on the backend and the scheduling algorithm, focusing on the student requirements first. Our plan to implement the scheduling algorithm has changed from a tree data structure to a graph data structure, so we will continue to implement this new and improved scheduling algorithm.</span>
+                        <span class="block text-xs pl-2">1 team meeting (Total duration: 60 minutes).</span>
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // RESTORED: Full IntersectionObserver script for dynamic navigation
+            const navLinks = document.querySelectorAll('.nav-link');
+            const sections = document.querySelectorAll('main section');
+
+            // Set the 'active' class on the target element
+            function setActiveLink(id) {
+                navLinks.forEach(link => {
+                    link.classList.remove('active-nav');
+                });
+                const activeLink = document.getElementById(`nav-${id}`);
+                if (activeLink) {
+                    activeLink.classList.add('active-nav');
+                }
+            }
+
+            // 1. Smooth Scrolling and Immediate Activation on Click
+            navLinks.forEach(link => {
+                link.addEventListener('click', function (e) {
+                    const href = this.getAttribute('href');
+                    const targetId = href.substring(1);
+                    
+                    e.preventDefault();
+                    
+                    // Activate link immediately on click
+                    setActiveLink(targetId);
+
+                    // Smooth scroll to section
+                    document.querySelector(href).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+
+            // 2. Intersection Observer for Scroll Activation (more performant than scroll listener)
+            const observerOptions = {
+                root: null, // viewport
+                rootMargin: '0px',
+                // A section is considered active when 30% of it is visible
+                threshold: 0.3 
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const sectionId = entry.target.id;
+                        setActiveLink(sectionId);
+                    }
+                });
+            }, observerOptions);
+
+            // Observe all main sections
+            sections.forEach(section => {
+                observer.observe(section);
+            });
+            
+            // Set initial active state to Home on load
+            setActiveLink('hero');
+        });
+    </script>
+</body>
+</html>
